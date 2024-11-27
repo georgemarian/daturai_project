@@ -13,7 +13,7 @@ black = "^23.3.0"
 isort = "^5.12.0"
 flake8 = "^6.0.0"
 pre-commit = "^3.3.3"
-ruff = "^0.0.289"
+ruff = "^0.0.289" 
 
 [tool.black]
 line-length = 88
@@ -23,3 +23,12 @@ include = '\.pyi?$'
 [tool.isort]
 profile = "black"
 multi_line_output = 3
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C", "N"]  # Use specific rulesets
+ignore = ["E501"]  # Example: ignore line-length errors
+target-version = "py310"  # Target your Python version
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py"]
