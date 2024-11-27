@@ -1,4 +1,3 @@
-
 class Solution:
     def word_count(self, filepath: str):
         """
