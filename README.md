@@ -23,7 +23,5 @@ poetry run pre-commit run --files  src/task_01.py --hook-stage manual
 poetry run pytest
 or
 python -m unittest tests/test_task.py -v
-or 
+or
 python -m unittest discover -s tests/ -p "test_*.py" -v
-
-
