@@ -1,36 +1,20 @@
 import unittest
 from src.task_01 import Solution
 
-
-class TestTwoSum(unittest.TestCase):
+class TestWordCounter(unittest.TestCase):
     def setUp(self):
-        self.solution = Solution()
-
-    def test_example1(self):
-        nums = [2, 7, 11, 15]
-        target = 9
-        self.assertEqual(self.solution.twoSum(nums, target), [0, 1])
-
-    def test_example2(self):
-        nums = [3, 2, 4]
-        target = 6
-        self.assertEqual(self.solution.twoSum(nums, target), [1, 2])
-
-    def test_example3(self):
-        nums = [3, 3]
-        target = 6
-        self.assertEqual(self.solution.twoSum(nums, target), [0, 1])
-
-    def test_negative_numbers(self):
-        nums = [0, -3, 4, 3, 90]
-        target = 0
-        self.assertEqual(self.solution.twoSum(nums, target), [1, 3])
-
-    def test_multiple_solutions(self):
-        nums = [2, 5, 5, 11]
-        target = 10
-        self.assertEqual(self.solution.twoSum(nums, target), [1, 2])
+        self.test_file = "test_sample.txt"
+        with open(self.test_file, "w") as f:
+            f.write("Hello world!")
+            f.write("This is a sample text file.")
+            f.write("Hello Python world.")
+            f.write("1231 is again 1231.")
+    
+    def cleanup(self):
+        os.remove(self.test_file)
+    
+    def test_word_count():
 
 
-if __name__ == "__main__":
+    if __name__ == "__main__":
     unittest.main()
